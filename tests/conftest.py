@@ -59,7 +59,7 @@ async def session(engine: AsyncEngine) -> AsyncGenerator[AsyncSession, None]:
                 await tsx.rollback()
         finally:
             await tsx.close()
-
+        print("a")
         await conn.close()
 
 
